@@ -54,10 +54,14 @@ if st.button("🔍 Predict Performance"):
 
     # Scale input
     input_scaled = scaler.transform(input_data)
-
-    # Predict final marks
+    
     predicted_marks = marks_model.predict(input_scaled)[0][0]
+
+    # Fix: keep marks within 0 to 100
+    predicted_marks = float(np.clip(predicted_marks, 0, 100))
+
     predicted_marks = round(predicted_marks, 2)
+
 
     # Predict grade
     grade_probs = grade_model.predict(input_scaled)
