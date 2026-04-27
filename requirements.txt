@@ -2,10 +2,6 @@ streamlit
 numpy
 pandas
 scikit-learn
-<<<<<<< HEAD
-tensorflow==2.15.1
-=======
-tensorflow==2.15.0
->>>>>>> 582bc5d6a52dad40e1a844fb688ed8d3838d38a5
+tensorflow==2.21.0
 joblib
 matplotlib
